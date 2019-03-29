@@ -26,7 +26,7 @@ If you want to learn more about the project see [Detailed documentation](docs/RE
 
 You can try the game locally or deploy it to your own server.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/quasoft/backgammonjs/tree/heroku)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sillyghost/backgammonjs/tree/heroku)
 
 ## How to install
 
