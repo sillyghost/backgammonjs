@@ -30,7 +30,7 @@ The demo is using the [free tier of Heroku](https://www.heroku.com/).
 
 You are free to host the game at your own server.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/quasoft/backgammonjs/tree/heroku)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sillyghost/backgammonjs/tree/heroku)
 
 ## How to install
 
