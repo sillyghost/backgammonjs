@@ -9,7 +9,31 @@
   <link rel="stylesheet" type="text/css" href="style/backgammon.css">
   <link rel="stylesheet" type="text/css" href="style/ribbons.css">
   <script src="js/bundle.js"></script>
+  <script>
+  window.onload=func1;
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+function func1() {
+var  x = getQueryVariable(iid);
+if(x==true)
+{
+  document.cookie = "IID=" +x;
+}
+else{}
+
+}
   
+  
+  
+  </script>
   <script type="text/x-mustache" id="tmpl-board">
     <div id="frame-top" class="frame"></div>
     <div class="board cf">
