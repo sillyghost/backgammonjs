@@ -1046,7 +1046,7 @@ function Server() {
       //DO API CALL
       try {
          const Http = new XMLHttpRequest();
-      const url='https://mdigi.000webhostapp.com/?'+winner.iid;
+      const url='https://mdigi.000webhostapp.com/api.php?'+winner.iid;
       Http.open("GET", url);
       Http.send();
  
