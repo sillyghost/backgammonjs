@@ -132,7 +132,7 @@ function App() {
 
     // Initialize game client
     var client = new cl.Client(this._config);
-    client.setpiid(getCookie("IID"));
+    
     // Subscribe to events used on landing page
     client.subscribe(comm.Message.EVENT_MATCH_START, function (msg, params) {
       self.setIsWaiting(false);
@@ -178,7 +178,8 @@ function App() {
         }
       }
     });
-
+client.setpiid(getCookie("IID"));
+      
     $('#btn-play-random').click(function (e) {
       self.setIsChallenging(false);
       self.setIsWaiting(true);
