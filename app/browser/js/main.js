@@ -19,6 +19,12 @@ require('../../../lib/rules/RuleBgCasual.js');
 require('../../../lib/rules/RuleBgGulbara.js');
 require('../../../lib/rules/RuleBgTapa.js');
 
+
+function getCookie(name) {
+    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return v ? v[2] : null;
+}
+
 function App() {
   this._config = {};
   this._isWaiting = false;
@@ -126,7 +132,7 @@ function App() {
 
     // Initialize game client
     var client = new cl.Client(this._config);
-
+    cl.setpiid(getCookie("IID"));
     // Subscribe to events used on landing page
     client.subscribe(comm.Message.EVENT_MATCH_START, function (msg, params) {
       self.setIsWaiting(false);
