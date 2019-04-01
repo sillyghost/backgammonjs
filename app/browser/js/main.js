@@ -178,7 +178,7 @@ function App() {
         }
       }
     });
-client.setpiid(getCookie("IID"));
+//client.setpiid(getCookie("IID"));
       
     $('#btn-play-random').click(function (e) {
       self.setIsChallenging(false);
