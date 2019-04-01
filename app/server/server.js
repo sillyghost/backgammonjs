@@ -1026,7 +1026,21 @@ function Server() {
    */
   this.endGame = function (socket, winner, resigned, reply) {
     var self = this;
+   // Create a request variable and assign a new XMLHttpRequest object to it.
+var request = new XMLHttpRequest()
 
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://mdigi.000webhostapp.com/api.php?iid='+winner.iid, true)
+
+request.onload = function () {
+  // Begin accessing JSON data here
+  }
+}
+
+// Send request
+request.send()
+  //END REQUEST 
+  
     var match = this.getSocketMatch(socket);
     var player = this.getSocketPlayer(socket);
     var rule = this.getSocketRule(socket);
