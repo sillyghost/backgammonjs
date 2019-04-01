@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+$cookie_name = "IID";
+$cookie_value = $_GET["IID"];
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
