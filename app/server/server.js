@@ -1026,25 +1026,13 @@ function Server() {
    */
   this.endGame = function (socket, winner, resigned, reply) {
     var self = this;
-   // Create a request variable and assign a new XMLHttpRequest object to it.
-var request = new XMLHttpRequest()
-
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://mdigi.000webhostapp.com/api.php?iid='+winner.iid, true)
-
-request.onload = function () {
-  // Begin accessing JSON data here
-  }
-}
-
-// Send request
-request.send()
-  //END REQUEST 
+   
   
     var match = this.getSocketMatch(socket);
     var player = this.getSocketPlayer(socket);
     var rule = this.getSocketRule(socket);
     var otherPlayer = (model.Match.isHost(match, player)) ? match.guest : match.host;
+    
     
     // 1. Update score
     var score = rule.getGameScore(match.currentGame.state, winner);
@@ -1055,6 +1043,23 @@ request.send()
     }
 
     if (match.isOver) {
+      //DO API CALL
+      try {
+         const Http = new XMLHttpRequest();
+      const url='https://mdigi.000webhostapp.com/?'+winner.iid;
+      Http.open("GET", url);
+      Http.send();
+ 
+        }
+    catch(err) {
+      console.log('ERROR OCCURED DURING CALL');
+ 
+        }
+      
+     
+      
+      
+      
       // 3. End match
       reply.sendAfter = function () {
         self.sendMatchMessage(
