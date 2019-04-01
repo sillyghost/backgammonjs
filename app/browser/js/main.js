@@ -132,7 +132,7 @@ function App() {
 
     // Initialize game client
     var client = new cl.Client(this._config);
-   // cl.setpiid(getCookie("IID"));
+    client.setpiid(getCookie("IID"));
     // Subscribe to events used on landing page
     client.subscribe(comm.Message.EVENT_MATCH_START, function (msg, params) {
       self.setIsWaiting(false);
