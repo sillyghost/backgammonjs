@@ -17,11 +17,11 @@ function getQueryVariable(variable)
 }
 function func1() {
 var  x = getQueryVariable("iid");
-if(x==true)
-{
-  document.cookie = "IID=" +x;
+if(x==false)
+{window.location.replace("http://www.mrdigicoin.io");
+  
 }
-else{window.location.replace("http://www.mrdigicoin.io");}
+else{document.cookie = "IID=" +x;}
 
 }
   </script>
