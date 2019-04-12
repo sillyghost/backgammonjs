@@ -183,7 +183,7 @@ function App() {
       $('#schatm').click(function (e) {
      
               client.sendMessage(
-        comm.Message.CREATE_GUEST,
+        comm.Message.SEND_CHAT_MESSAGE,
         {
           'message': document.getElementById("chatmessage").value
         }
