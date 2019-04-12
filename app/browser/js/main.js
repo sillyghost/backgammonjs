@@ -187,13 +187,7 @@ client.subscribe(comm.Message.SEND_CHAT_MESSAGE, function (msg, params) {
 //client.setpiid(getCookie("IID"));
       //SEND MESSAGE USING CLIENT.sendmessage
       $('#schatm').click(function (e) {
-     
-              client.sendMessage(
-        comm.Message.SEND_CHAT_MESSAGE,
-        {
-          'message': document.getElementById("chatmessage").value
-        }
-      );
+     client.schatm(document.getElementById("chatmessage").value);
     });
       //END SEND MESSAGE
       
