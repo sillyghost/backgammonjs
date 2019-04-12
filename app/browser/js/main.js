@@ -149,7 +149,7 @@ function App() {
 client.subscribe(comm.Message.SEND_CHAT_MESSAGE, function (msg, params) {
       //self.setIsWaiting(false);
      // self.setCurrentView('index');
-    console.write('RECIEVED MESSAGE'+params);
+    console.log('RECIEVED MESSAGE'+params);
       self.updateView();
     });
 
