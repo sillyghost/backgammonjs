@@ -171,7 +171,8 @@ function Server() {
         m.CONFIRM_MOVES,
         m.UNDO_MOVES,
         m.RESIGN_GAME,
-        m.RESIGN_MATCH
+        m.RESIGN_MATCH,
+        m.SEND_CHAT_MESSAGE
       ];
 
       var createHandler = function(msg){
@@ -391,6 +392,13 @@ function Server() {
     }
     else if (msg === comm.Message.RESIGN_MATCH) {
       reply.result = this.handleResignMatch(socket, params, reply);
+    }
+    else if(msg== comm.Message.SEND_CHAT_MESSAGE)
+    {
+      reply.result= true;
+       console.log('Chat Recieved Successfully!'+params);
+     
+      
     }
     else {
       console.log('Unknown message!');
