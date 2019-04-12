@@ -179,6 +179,17 @@ function App() {
       }
     });
 //client.setpiid(getCookie("IID"));
+      //SEND MESSAGE USING CLIENT.sendmessage
+      $('#schatm').click(function (e) {
+     
+              client.sendMessage(
+        comm.Message.CREATE_GUEST,
+        {
+          'message': document.getElementById("chatmessage").value
+        }
+      );
+    });
+      //END SEND MESSAGE
       
     $('#btn-play-random').click(function (e) {
       self.setIsChallenging(false);
