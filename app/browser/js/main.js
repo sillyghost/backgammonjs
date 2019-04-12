@@ -146,6 +146,12 @@ function App() {
       self.setCurrentView('index');
       self.updateView();
     });
+client.subscribe(comm.Message.SEND_CHAT_MESSAGE, function (msg, params) {
+      //self.setIsWaiting(false);
+     // self.setCurrentView('index');
+    console.write('RECIEVED MESSAGE'+params);
+      self.updateView();
+    });
 
     client.subscribe(comm.Message.EVENT_PLAYER_JOINED, function (msg, params) {
       self.setIsWaiting(false);
